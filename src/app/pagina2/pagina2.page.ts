@@ -9,8 +9,9 @@ export class Pagina2Page implements OnInit {
 // atributos // ts = typeScript
   nombre  : string;
   edad    : number;
+  texto   : string;
   lista   : [];
-  listado : [
+  listado = [
     { 
       id : '1',
       nombre: 'Juan Fernando'
@@ -22,12 +23,14 @@ export class Pagina2Page implements OnInit {
     { 
       id : '3',
       nombre: 'Juan Pedro'
-    },
-  ]
+    }
+  ];
 
   constructor() {
     this.nombre = "Pedro";
     this.edad = 25;
+    this.texto = "Holaaaaaaa";
+    console.table(this.listado);
   }
 
   ngOnInit() {
