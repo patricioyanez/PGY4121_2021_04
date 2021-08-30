@@ -14,5 +14,7 @@ export class Pagina3Page implements OnInit {
   onClick()
   {
     console.log("Ud realizó un clic")
+    const fecha = new Date();
+    console.log(fecha)
   }
 }

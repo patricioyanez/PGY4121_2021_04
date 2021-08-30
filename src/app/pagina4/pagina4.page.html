@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Promediador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text color="primary">
+    <h1>Promedio de notas</h1>
+  </ion-text>
+    
+  <ion-input type="number" placeholder="Nota 1" #nota1></ion-input>
+  <ion-input type="number" placeholder="Nota 2" #nota2></ion-input>
+  <ion-input type="number" placeholder="Nota 3" #nota3></ion-input>
+  <br>
+
+  <ion-button (click)="promediar(nota1, nota2, nota3)" 
+  expand="block" fill="clear" shape="round">
+   promediar
+  </ion-button>
+
+  <br>
+  <div *ngIf="prom;">
+    <ion-text color="primary">
+      <h1>Su promedio es: {{prom}}</h1>
+    </ion-text>
+    <ion-text color="primary">
+      <h1>{{situacion}}</h1>
+    </ion-text>
+  </div>
+
+</ion-content>
