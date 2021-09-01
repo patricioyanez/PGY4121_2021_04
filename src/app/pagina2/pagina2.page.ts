@@ -23,6 +23,14 @@ export class Pagina2Page implements OnInit {
     { 
       id : '3',
       nombre: 'Juan Pedro'
+    },
+    { 
+      id : '2',
+      nombre: 'Juan Luis'
+    },
+    { 
+      id : '3',
+      nombre: 'Juan Pedro'
     }
   ];
 

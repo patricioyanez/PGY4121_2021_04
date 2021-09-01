@@ -24,6 +24,7 @@
   <ng-template #noTieneValor>No tiene valor</ng-template>
 
   <ion-item *ngFor="let persona of listado">
+    <ion-label>{{persona.id}}</ion-label>
     <ion-label>{{persona.nombre}}</ion-label>
   </ion-item>
 

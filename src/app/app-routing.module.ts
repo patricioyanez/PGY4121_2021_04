@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'pagina2',
+    redirectTo: 'playas',
     pathMatch: 'full'
   },
   {
@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'pagina4',
     loadChildren: () => import('./pagina4/pagina4.module').then( m => m.Pagina4PageModule)
+  },
+  {
+    path: 'playas',
+    loadChildren: () => import('./playas/playas.module').then( m => m.PlayasPageModule)
   },
 ];
 

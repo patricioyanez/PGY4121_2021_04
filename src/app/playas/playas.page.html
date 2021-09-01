@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>playas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div *ngFor="let playa of playas">
+      <ion-avatar>
+        <img [src]="playa.imagenUrl" />
+      </ion-avatar>
+      <ion-label color="primary">{{playa.nombre}}</ion-label>
+    </div>    
+  </ion-list>
+  
+</ion-content>
