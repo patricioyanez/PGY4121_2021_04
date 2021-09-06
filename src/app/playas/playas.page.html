@@ -6,11 +6,11 @@
 
 <ion-content>
   <ion-list>
-    <div *ngFor="let playa of playas">
+    <div *ngFor="let playa of playas" [routerLink]="['/', playa.id]">
       <ion-avatar>
         <img [src]="playa.imagenUrl" />
       </ion-avatar>
-      <ion-label color="primary">{{playa.nombre}}</ion-label>
+      <ion-label color="primary">{{playa.nombre | titlecase }}</ion-label>
     </div>    
   </ion-list>
   
