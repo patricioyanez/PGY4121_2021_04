@@ -6,6 +6,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Lugar } from '../lugar.model';
 // importar servicios con los datos de las playas
 import { LugaresService } from '../lugares.service';
+// importar el componente alert control
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-detalle',
@@ -17,7 +19,8 @@ export class DetallePage implements OnInit {
   constructor(
     private activatedRouter: ActivatedRoute,
     private lugaresService : LugaresService,
-    private router : Router
+    private router : Router,
+    private alertController : AlertController
   ) { }
 
   ngOnInit() {
@@ -30,4 +33,27 @@ export class DetallePage implements OnInit {
 
   }
 
-}
+  async eliminar()
+  {
+    const alerta = await this.alertController.create({
+      header      : "¿Está seguro de eliminar el lugar?",
+      message     : "Favor confirmar la acción",
+      buttons     : [
+        {
+          text    : "No",
+          role    : "cancel"
+        },
+        {
+          text    : "Si",
+          handler : () => {
+            this.lugaresService.deleteLugar(this.playa.id);
+            this.router.navigateByUrl("/playas");
+          }
+        }
+      ]
+    })
+    await alerta.present();
+  }
+
+
+} // clase ts
