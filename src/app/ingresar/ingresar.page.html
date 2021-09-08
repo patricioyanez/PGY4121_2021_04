@@ -3,10 +3,31 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="playas"></ion-back-button>
     </ion-buttons>
-    <ion-title>ingresar</ion-title>
+    <ion-title>Ingresar un nuevo lugar</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-text color="primary">
+    <h1>Registro de playa</h1>
+  </ion-text>
+
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input placeholder="Ej: Porto Seguro" #nombre></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">url imagen del lugar</ion-label>
+    <ion-input #url></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Comentario del lugar</ion-label>
+    <ion-textarea placeholder="ej: playa tranquila" #comentario></ion-textarea>
+  </ion-item>
+  <br><br>
+  <ion-button expand="block" (click)="agregar(nombre, url, comentario)">
+    Guardar
+  </ion-button>
+  <hr>
 </ion-content>

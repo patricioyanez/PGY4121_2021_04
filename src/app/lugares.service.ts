@@ -33,7 +33,9 @@ export class LugaresService {
   {
     return this.lugares.find( x => { return x.id == id})
   }
-  
+  deleteLugar(id: number){
+    this.lugares = this.lugares.filter( x=> {return x.id != id})
+  }  
   addLugar(nombre: string, imagenUrl: string, comentario: string)
   {
     this.lugares.push({
@@ -42,8 +44,5 @@ export class LugaresService {
       imagenUrl : imagenUrl,
       comentario: comentario
     })
-  }
-  deleteLugar(id: number){
-    this.lugares = this.lugares.filter( x=> {return x.id != id})
   }
 }
