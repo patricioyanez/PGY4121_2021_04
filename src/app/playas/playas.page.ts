@@ -27,5 +27,4 @@ export class PlayasPage implements OnInit {
     this.router.navigate(['/ingresar'])
   }
 
-
 }
