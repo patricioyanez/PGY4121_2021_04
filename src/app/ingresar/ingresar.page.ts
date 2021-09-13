@@ -26,6 +26,8 @@ export class IngresarPage implements OnInit {
     const com = comentario.value;
 
     this.lugaresService.addLugar(nom,img,com);
+
+    // envia al usuario a otra pagina
     this.router.navigate(['/playas']);
   }
 }
